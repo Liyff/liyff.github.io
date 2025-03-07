@@ -1,9 +1,9 @@
 # Site settings
 title: liyff's homepage
-SEOTitle: 柏荧的博客 | BY Blog
+SEOTitle: 川哥的博客 | BY Blog
 header-img: img/post-bg-desk.jpg
 email: liyfwork@qq.com
-description: "Every failure is leading towards success."
+description: "技术分享博客"
 keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
 url: "http://liyff.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -11,7 +11,7 @@ github_repo: "https://github.com/Liyff/liyff.github.io.git" # you code repositor
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "追光的人，终会光芒万丈"
 sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
