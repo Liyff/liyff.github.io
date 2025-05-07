@@ -12,7 +12,7 @@ github_repo: "https://github.com/Liyff/liyff.github.io.git" # you code repositor
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Do it, then perfect it."
-sidebar-avatar: https://liyff.github.io/liyff.github.io/img/avatar-by.jpg       # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://github.com/Liyff/liyff.github.io/blob/master/img/avatar-by%20.jpg?raw=true      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
