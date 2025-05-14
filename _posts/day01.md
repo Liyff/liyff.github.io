@@ -76,10 +76,28 @@ void Func2(int a, long b, char c)
 
 list.h   list.c  test.c
 
-1.预处理   ->
+**1.预处理   ->**
 
-2.编译       ->
+list.i		test.i
 
-3.汇编       ->
+**2.编译       ->**
 
-4.链接       ->
+list.s		test.s
+
+**3.汇编       ->**
+
+list.o		test.o
+
+**4.链接       ->**将目标文件链接到一起
+
+![image-20250514231622986](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250514231622986.png)
+
+**C++  listcpp**反汇编
+
+![image-20250514231715760](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250514231715760.png
+
+![image-20250514231805891](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250514231805891.png)
+
+**C	listc**反汇编
+
+![image-20250514231839926](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250514231839926.png)
