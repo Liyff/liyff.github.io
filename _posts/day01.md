@@ -72,7 +72,7 @@ void Func2(int a, long b, char c)
 
 面试问题：
 
-#### C++是如何支持函数重载？为什么C语言不支持
+#### 4.1 C++是如何支持函数重载？为什么C语言不支持
 
 list.h   list.c  test.c
 
@@ -101,3 +101,71 @@ list.o		test.o
 **C	listc**反汇编
 
 ![image-20250514231839926](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250514231839926.png)
+
+#### 4.2 **要求C和C++程序都能用C++这个（动态库/静态库）**
+
+extern “c” void Func(int a, int b)
+
+{
+
+}
+
+![image-20250515214330162](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515214330162.png)
+
+## 5.引用（给已有变量起别名）
+
+
+
+#### 特性
+
+int a = 10;
+
+//int& ra;	编译报错，没有初始化
+
+int& ra = a; 	//ra是a的引用，a再取了一个名称叫ra，它们共用一块空间，编译器不会产生新空间
+
+int& rr = ra;
+
+int b = 2;
+
+ra = b; 	//这里是b的值赋值给ra，
+
+**1.引用必须在定义时初始化**
+
+**2.一个变量可以有多个引用**
+
+**3.引用一旦引用一个实体，不能再引用其他实体**
+
+
+
+#### 常引用
+
+const int a = 0;	//只读
+
+//int& ra = a;	编译报错，权限放大不行
+
+const int& ra = a;
+
+**变量访问的权限可以缩小不能放大**,	**（适用引用和指针之间的赋值）**
+
+int b = 10;
+
+const int& rb = b;	//引用起别名时，权限可以缩小
+
+![image-20250515221334011](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515221334011.png)
+
+![image-20250515222526545](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515222526545.png)
+
+（适用引用和指针之间的赋值）
+
+![image-20250515222828453](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515222828453.png)
+
+#### 1.引用做参数
+
+![image-20250515223836627](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515223836627.png)
+
+#### 2.引用做返回值
+
+![image-20250515224655765](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515224655765.png)
+
+![image-20250515224849131](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515224849131.png)
