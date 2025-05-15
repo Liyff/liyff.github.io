@@ -189,3 +189,31 @@ static int c = a+b 在第一次调用执行后，**第二次调用就不执行�
 }
 
 ![image-20250515230706305](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515230706305.png)
+
+#### 3.指针和引用区别	
+
+**引用** 语法上是起别名，底层 反汇编实现还是利用指针实现的
+
+int& ra = a;
+
+int* p = &a;
+
+**1.引用必须初始化，**指针没有要求   //int& a = b;      int* p;
+
+**2.引用一个实体后，不能再引用其他实体，**指针可以指向多个
+
+**3.sizeof含义不同，引用是引用类型的大小，**指针始终是4个字节（32位）
+
+
+
+## 6.内联函数
+
+inline是一种空间换时间，内联函数在调用地方直接展开，适用频繁调用的小函数Swap()
+
+![image-20250515234757376](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515234757376.png)
+
+inline 替代宏
+
+#define N 10
+
+const int N = 10;
