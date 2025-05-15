@@ -178,4 +178,14 @@ const int& rb = b;	//引用起别名时，权限可以缩小
 
 加了static，变量c的声明周期是直到程序结束都存在，在数据端的静态区，
 
+static int c = a+b 在第一次调用执行后，**第二次调用就不执行了，因为c已经初始化了**。
+
+{
+
+​	static int c = 1;
+
+​	c = a+b;	//这一句每次调用都会执行
+
+}
+
 ![image-20250515230706305](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515230706305.png)
