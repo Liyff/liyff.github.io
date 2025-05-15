@@ -164,8 +164,18 @@ const int& rb = b;	//引用起别名时，权限可以缩小
 
 ![image-20250515223836627](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515223836627.png)
 
-#### 2.引用做返回值
+#### 2.引用做返回值		
+
+作用：少创建临时对象，可以提高效率
 
 ![image-20250515224655765](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515224655765.png)
 
 ![image-20250515224849131](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515224849131.png)
+
+不加static，会出问题，出了作用域栈帧销毁后c就不在了，ret还是引用c那块空间，可能是随机值，
+
+![image-20250515230151854](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515230151854.png)
+
+加了static，变量c的声明周期是直到程序结束都存在，在数据端的静态区，
+
+![image-20250515230706305](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250515230706305.png)
