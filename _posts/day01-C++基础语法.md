@@ -76,15 +76,15 @@ void Func2(int a, long b, char c)
 
 list.h   list.c  test.c
 
-**1.预处理   ->**
+**1.预处理   ->**头文件展开，宏展开，去掉注释，
 
 list.i		test.i
 
-**2.编译       ->**
+**2.编译       ->**检查语法，转为汇编
 
 list.s		test.s
 
-**3.汇编       ->**
+**3.汇编       ->**汇编转为机器码
 
 list.o		test.o
 
@@ -102,7 +102,9 @@ list.o		test.o
 
 ![image-20250514231839926](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250514231839926.png)
 
-#### 4.2 **要求C和C++程序都能用C++这个（动态库/静态库）**
+#### 4.2 extern “c”
+
+#### **要求C和C++程序都能用C++这个（动态库/静态库）**
 
 extern “c” void Func(int a, int b)
 
@@ -217,3 +219,63 @@ inline 替代宏
 #define N 10
 
 const int N = 10;
+
+## 7.auto
+
+int a = 1;
+
+auto b = a;	//b的类型是根据a的类型推导的
+
+int& c = a;	//int
+
+cout<< typeid(b).name()<<endl;	//结果是int
+
+
+
+auto& d = a;	//int
+
+auto* e = &a;	//int*
+
+auto f = &a;	//int*
+
+注意：
+
+​	**1.auto不能做参数**
+
+​	**2.auto不能直接做为数组**
+
+![image-20250516215115276](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250516215115276.png)
+
+## 8.范围for
+
+for（auto& e: array)	//加引用，e就是数组元素的别名
+
+{
+
+​	e*=2;
+
+}
+
+
+
+for（auto e: array)
+
+{
+
+​	cout<< e<<endl;
+
+}
+
+这样写不行，
+
+![image-20250516215652750](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250516215652750.png)
+
+
+
+注意：
+
+C++11中把NULL认为是一个0，空指针用nullptr
+
+int* p = nullptr;
+
+![image-20250516220202019](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250516220202019.png)
