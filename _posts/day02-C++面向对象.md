@@ -104,13 +104,25 @@ class Date
 
 ​	public:
 
-​				void 	Init(int	year,	int	month,	int	day)
+​				void 	Init(int	year,	int	month,	int	day)		//	void 	Init(Date	this,	int	year,	int	month,	int	day)
 
 ​				{
 
+​						_year = year;
+
+​						_month = month;
+
+​						_day = day;
+
 ​				}
 
-​				void	Print();
+​				void	Print()
+
+​				{
+
+​						cout	<<	_year	<<	“-”	<<	_month	<<	“-”	<<	_day	<<	endl; 
+
+​				}	
 
 }
 
@@ -118,4 +130,4 @@ class Date
 
 
 
-this指针是存在栈上的，因为它是一个形参
+**this指针是存在栈上的，因为它是一个形参**
