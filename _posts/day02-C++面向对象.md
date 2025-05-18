@@ -90,6 +90,8 @@ class A2
 
 ##### **this指针**
 
+//this是谁调这个成员函数，这个this就指向谁，
+
 class Date
 
 {
@@ -104,15 +106,15 @@ class Date
 
 ​	public:
 
-​				void 	Init(int	year,	int	month,	int	day)		//	void 	Init(Date	this,	int	year,	int	month,	int	day)
+​				void 	Init(int	year,	int	month,	int	day)		//	void 	Init(Date*	this,	int	year,	int	month,	int	day)
 
 ​				{
 
-​						_year = year;
+​						_year = year;	// this-> _year = year;
 
-​						_month = month;
+​						_month = month;	//this-> _month = month;
 
-​						_day = day;
+​						_day = day;	//this-> _day = day;
 
 ​				}
 
