@@ -74,7 +74,7 @@ public:
 
 ​			void fun();
 
-}
+};
 
 A1 a;	//实例化a的大小是8
 
@@ -84,7 +84,7 @@ class A2
 
 {
 
-}
+};
 
 
 
@@ -122,14 +122,92 @@ class Date
 
 ​				{
 
-​						cout	<<	_year	<<	“-”	<<	_month	<<	“-”	<<	_day	<<	endl; 
+​						cout << _year << "-" << _month << "-" << _day << endl;
 
 ​				}	
 
-}
+};
 
 
 
 
 
 **this指针是存在栈上的，因为它是一个形参**
+
+
+
+#### 2.构造函数
+
+默认构造函数
+
+自定义构造函数
+
+全缺省构造函数
+
+```
+class Date
+{
+
+private:
+
+	int _year;
+	int _month;
+	int _day;
+
+public:
+	//构造函数，在对象构造时调用的函数
+	//如果我们没有显式定义构造函数，C++编译器会自动生成一个无参构造函数
+	
+	//无参构造语法坑：1.针对内置类型成员变量没有做处理 
+	// 2.针对自定义类型成员变量，调用它的构造函数初始化
+	Date(int year,int month,int day)
+	{
+		_year = year;
+		_month = month;
+		_day = day;
+	}
+	Date()//一旦用户显式定义有参构造函数，编译器就不会自动生成无参构造
+	{
+
+	}
+
+	//更好的方式——》全缺省
+	/*
+	Date(int year = 0, int month = 1, int day = 1)
+	{
+		_year = year;
+		_month = month;
+		_day = day;
+
+	}
+	*/
+
+
+
+};
+```
+
+
+
+#### 3.析构函数
+
+未显式定义，编译器自动生成，在对象生命周期结束后自动调用。完成对象里面的资源清理工作
+
+```
+class Stack{
+
+public:
+ Stack(int n = 10)
+ {
+	_a = (int*)malloc(sizeof(int) * n);
+	_size = 0;
+	_capacity = 0; 
+ } 
+ ~Stack()
+ {
+	free(_a);
+	_size = _capacity = 0;
+ }
+};
+```
+
