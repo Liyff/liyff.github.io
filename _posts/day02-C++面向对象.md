@@ -212,3 +212,67 @@ public:
 };
 ```
 
+
+
+#### 4.拷贝构造
+
+
+
+```
+Date(int year = 0, int month = 1, int day = 1)
+{
+	_year = year;
+	_month = month;
+	_day = day;
+
+}
+Date(Date& d)
+{
+	_year = d._year;
+	_month = d._month;
+	_day = d._day;
+	
+}
+
+
+int main()
+{
+	Date d1(2025,5,12);
+	Date d2(d1);//调用拷贝构造
+	Date d3 = d1;
+
+
+
+	return 0;
+}
+```
+
+![image-20250518222605610](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250518222605610.png)
+
+#### 5.运算符的重载
+
+bool operator==(Date& d);
+
+```
+	
+	bool operator==(Date& d) //d1.operator(&d1,d)
+	{
+		return _year == d._year &&
+			_month == d._month &&
+			_day == d._day;
+	}
+	
+	
+int main()
+{
+	Date d1(2025,5,12);
+	Date d2(2025,5,12);
+	d1 == d2;	//d1.operator==(d2);
+
+
+
+
+	return 0;
+}
+```
+
