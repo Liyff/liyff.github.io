@@ -253,24 +253,40 @@ int main()
 
 bool operator==(Date& d);
 
+bool operator>(Date& d);
+
 ```
 	
-	bool operator==(Date& d) //d1.operator(&d1,d)
+bool operator==(Date& d) //d1.operator(&d1,d)
+{
+	return _year == d._year &&
+		_month == d._month &&
+		_day == d._day;
+}
+
+bool operator>(Date& d)
+{
+	if (_year > d._year)
 	{
-		return _year == d._year &&
-			_month == d._month &&
-			_day == d._day;
+		return true;
 	}
-	
+	else if (_year == d._year && _month > d._month)
+	{
+		return true;
+	}
+	else if (_year == d._year && _month == d._month && _day > d._day)
+	{
+		return true;
+	}
+	return false;
+
+}
 	
 int main()
 {
 	Date d1(2025,5,12);
 	Date d2(2025,5,12);
 	d1 == d2;	//d1.operator==(d2);
-
-
-
 
 	return 0;
 }
