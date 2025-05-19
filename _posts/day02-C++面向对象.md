@@ -134,7 +134,11 @@ class Date
 
 **this指针是存在栈上的，因为它是一个形参**
 
+## 默认的成员函数
 
+我们不写编译器自动生成
+
+![image-20250519221752754](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250519221752754.png)
 
 #### 2.构造函数
 
@@ -226,7 +230,7 @@ Date(int year = 0, int month = 1, int day = 1)
 	_day = day;
 
 }
-Date(Date& d)
+Date(const Date& d)
 {
 	_year = d._year;
 	_month = d._month;
@@ -248,6 +252,10 @@ int main()
 ```
 
 ![image-20250518222605610](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250518222605610.png)
+
+##### 浅拷贝问题
+
+![image-20250519220801660](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250519220801660.png)
 
 #### 5.运算符的重载
 
@@ -291,4 +299,10 @@ int main()
 	return 0;
 }
 ```
+
+.*,	sizeof,	?:,	.,	::这5个运算符不能重载
+
+
+
+## 日期类实现
 
