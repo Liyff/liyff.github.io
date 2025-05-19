@@ -255,6 +255,8 @@ int main()
 
 ##### 浅拷贝问题
 
+对同一空间释放两次
+
 ![image-20250519220801660](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250519220801660.png)
 
 #### 5.运算符的重载
@@ -300,9 +302,51 @@ int main()
 }
 ```
 
-.*,	sizeof,	?:,	.,	::这5个运算符不能重载
+**.*,	sizeof,	?:,	.,	::这5个运算符不能重载**
 
 
 
 ## 日期类实现
+
+Date d1;
+
+//运算符重载
+
+d1.operator>(Date& d);
+
+d1.operator==(Date& d);
+
+d1.operator<(Date& d);
+
+d1.operator>=(Date& d);
+
+d1.operator<=(Date& d);
+
+d1+day; 
+
+d1-day;  
+
+d1+=day;
+
+d1-=day;
+
+d1-d2;
+
+d1++;
+
+++d1;
+
+d1--;
+
+--d1;
+
+
+
+//拷贝构造和赋值运算符的重载
+
+Date(const Date& d);
+
+d1.operator=(Date& d);
+
+
 
