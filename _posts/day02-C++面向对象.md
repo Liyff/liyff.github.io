@@ -350,3 +350,16 @@ d1.operator=(Date& d);
 
 
 
+## const成员
+
+const对象调用成员函数
+
+![image-20250520222925319](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250520222925319.png)
+
+
+
+成员函数调用const成员函数
+
+![image-20250520220159354](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250520220159354.png)
+
+![image-20250520221851525](C:\Users\LIYUFENG\AppData\Roaming\Typora\typora-user-images\image-20250520221851525.png)
