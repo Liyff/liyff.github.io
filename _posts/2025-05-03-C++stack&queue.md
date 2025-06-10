@@ -207,11 +207,22 @@ namespace liyf
 
 int main()
 {
-	
+	//priority_queue<int> pq;
+	priority_queue<int,vector<int>,greater<int>> pq;
+	pq.push(1);
+	pq.push(2);
+	pq.push(3);
+	pq.push(4);
 	
 	
 	liyf::less<int> lessFunc;
 	cout << lessFunc(1,2) << endl;
+	
+	//升序 less <
+	sort(v.begin(),v.end());
+	
+	//降序  greater >
+	sort(v.begin(),v.end(),greater<int>());
 }
 ```
 
