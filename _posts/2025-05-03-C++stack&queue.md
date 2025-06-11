@@ -2,9 +2,13 @@
 
 stack/queue/priority_queue   **容器适配器** 都不支持迭代器遍历，因为他们都包含特殊性质FILO,FIFO
 
-std::deque 双端队列
+容器：     std::deque 双端队列  string/vector/list/deque				(序列式容器)
 
+迭代器： iterator / const_iterator / reverse_iterator / const_reverse_iterator
 
+算法： 	sort / find / reverse
+
+仿函数： less / greater
 
 ```
  #include<vector>
