@@ -42,6 +42,8 @@
   }
 ```
 
+
+
 ##### 1.四个默认成员函数
 
 - 构造函数
@@ -109,7 +111,9 @@ namespace lyf
 			:_str(new char[strlen(s._str)+1])
 		{
 			strcpy(_str, s._str);
-		}#include "stdio.h"
+		}
+
+#include "stdio.h"
 #include <string.h>
 #include <stdlib.h>
 #include <utility>
