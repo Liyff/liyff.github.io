@@ -73,7 +73,7 @@ namespace liyf
 
 
 
-双端队列
+### 双端队列
 
 ```
 缺点：
@@ -87,7 +87,7 @@ namespace liyf
 
 
 
-优先级队列
+### 优先级队列
 
 ```
 ptiotity_queue
